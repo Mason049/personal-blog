@@ -1,65 +1,143 @@
-import Image from "next/image";
+import Link from "next/link";
+import { ArrowRight, BookOpen, Briefcase, User, Mail } from "lucide-react";
+
+const features = [
+  {
+    icon: User,
+    title: "关于我",
+    description: "了解我的背景、经历和热爱的事物",
+    href: "/about",
+  },
+  {
+    icon: Briefcase,
+    title: "项目作品",
+    description: "探索我创建的项目和开源贡献",
+    href: "/projects",
+  },
+  {
+    icon: BookOpen,
+    title: "博客文章",
+    description: "阅读我对技术、设计和生活的思考",
+    href: "/blog",
+  },
+  {
+    icon: Mail,
+    title: "联系方式",
+    description: "有想法或合作意向？随时联系我",
+    href: "/contact",
+  },
+];
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+    <div>
+      {/* Hero Section */}
+      <section className="pt-20 pb-16 md:pt-32 md:pb-24 px-6">
+        <div className="max-w-[980px] mx-auto text-center">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-semibold tracking-tight leading-[1.1] mb-6">
+            你好，我是
+            <span className="text-accent"> 你的名字</span>
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+          <p className="text-lg md:text-xl text-secondary max-w-2xl mx-auto leading-relaxed mb-10">
+            一名热爱创造的开发者 / 设计师 / 写作者。
+            <br className="hidden md:block" />
+            在这里记录我的思考、分享我的作品。
           </p>
+          <div className="flex items-center justify-center gap-4">
+            <Link
+              href="/projects"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-foreground text-background text-sm font-medium rounded-full hover:opacity-90 transition-opacity duration-200"
+            >
+              查看作品
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+            <Link
+              href="/blog"
+              className="inline-flex items-center gap-2 px-6 py-3 text-sm font-medium text-accent hover:underline underline-offset-4"
+            >
+              阅读博客
+            </Link>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      {/* Features Grid */}
+      <section className="py-16 md:py-24 px-6 bg-tertiary/50">
+        <div className="max-w-[980px] mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {features.map((feature) => (
+              <Link
+                key={feature.title}
+                href={feature.href}
+                className="group p-8 rounded-2xl bg-background border border-border/50 hover:border-border transition-all duration-300 hover:shadow-lg"
+              >
+                <feature.icon className="w-8 h-8 mb-4 text-accent" />
+                <h3 className="text-lg font-semibold mb-2">{feature.title}</h3>
+                <p className="text-sm text-secondary leading-relaxed">
+                  {feature.description}
+                </p>
+                <div className="mt-4 flex items-center gap-1 text-sm text-accent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  了解更多 <ArrowRight className="w-3 h-3" />
+                </div>
+              </Link>
+            ))}
+          </div>
         </div>
-      </main>
+      </section>
+
+      {/* Latest Posts Preview */}
+      <section className="py-16 md:py-24 px-6">
+        <div className="max-w-[980px] mx-auto">
+          <div className="flex items-center justify-between mb-10">
+            <h2 className="text-2xl md:text-3xl font-semibold tracking-tight">
+              最新文章
+            </h2>
+            <Link
+              href="/blog"
+              className="text-sm text-accent hover:underline underline-offset-4"
+            >
+              查看全部
+            </Link>
+          </div>
+          <div className="space-y-0">
+            {[
+              {
+                title: "如何构建高性能的 React 应用",
+                date: "2026年4月15日",
+                category: "技术",
+              },
+              {
+                title: "设计系统实践：从零到一",
+                date: "2026年4月8日",
+                category: "设计",
+              },
+              {
+                title: "远程工作三年的感悟",
+                date: "2026年3月28日",
+                category: "生活",
+              },
+            ].map((post, index) => (
+              <Link
+                key={post.title}
+                href="/blog"
+                className={`group flex items-center justify-between py-5 ${
+                  index !== 2 ? "border-b border-border/50" : ""
+                }`}
+              >
+                <div>
+                  <h3 className="text-base font-medium group-hover:text-accent transition-colors duration-200">
+                    {post.title}
+                  </h3>
+                  <p className="text-sm text-secondary mt-1">
+                    {post.date} · {post.category}
+                  </p>
+                </div>
+                <ArrowRight className="w-4 h-4 text-secondary group-hover:text-accent group-hover:translate-x-1 transition-all duration-200" />
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
