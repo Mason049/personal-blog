@@ -1,17 +1,17 @@
-import { MapPin, Calendar, Heart, Code, Coffee, Globe } from "lucide-react";
+import { MapPin, Calendar, Heart, Sprout, BookOpen, Microscope } from "lucide-react";
 
 const stats = [
-  { label: "年开发经验", value: "5+" },
-  { label: "完成项目", value: "30+" },
-  { label: "技术文章", value: "50+" },
-  { label: "开源贡献", value: "100+" },
+  { label: "在读年限", value: "3+" },
+  { label: "发表论文", value: "5+" },
+  { label: "参与项目", value: "8+" },
+  { label: "田间调研", value: "20+" },
 ];
 
 const interests = [
-  { icon: Code, label: "编程开发" },
-  { icon: Globe, label: "开源社区" },
-  { icon: Coffee, label: "咖啡与阅读" },
-  { icon: Heart, label: "摄影旅行" },
+  { icon: Sprout, label: "植物病理" },
+  { icon: Microscope, label: "分子生物学" },
+  { icon: BookOpen, label: "文献阅读" },
+  { icon: Heart, label: "自然观察" },
 ];
 
 export default function About() {
@@ -24,7 +24,7 @@ export default function About() {
             关于我
           </h1>
           <p className="text-lg text-secondary leading-relaxed">
-            热爱生活，热爱创造。我相信好的代码和好的设计一样，都需要用心打磨。
+            热爱植物，热爱科研。我相信每一次田间观察都是与自然的对话。
           </p>
         </div>
       </section>
@@ -34,17 +34,17 @@ export default function About() {
         <div className="max-w-[680px] mx-auto">
           <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
             <div className="w-32 h-32 md:w-40 md:h-40 rounded-full bg-tertiary border border-border/50 flex items-center justify-center shrink-0">
-              <span className="text-4xl font-semibold text-secondary">你</span>
+              <span className="text-4xl font-semibold text-secondary">陈</span>
             </div>
             <div className="text-center md:text-left">
-              <h2 className="text-2xl font-semibold mb-2">你的名字</h2>
-              <p className="text-secondary mb-4">全栈开发者 / 产品设计师</p>
+              <h2 className="text-2xl font-semibold mb-2">陈先楚</h2>
+              <p className="text-secondary mb-4">南京农业大学 · 植物病理学专业博士生</p>
               <div className="flex flex-wrap items-center justify-center md:justify-start gap-4 text-sm text-secondary">
                 <span className="flex items-center gap-1">
-                  <MapPin className="w-3.5 h-3.5" /> 中国，上海
+                  <MapPin className="w-3.5 h-3.5" /> 中国，南京
                 </span>
                 <span className="flex items-center gap-1">
-                  <Calendar className="w-3.5 h-3.5" /> 2019 年开始编程
+                  <Calendar className="w-3.5 h-3.5" /> 2023 年开始读博
                 </span>
               </div>
             </div>
@@ -56,13 +56,13 @@ export default function About() {
       <section className="py-12 px-6">
         <div className="max-w-[680px] mx-auto space-y-6 text-secondary leading-relaxed">
           <p>
-            我是一名热衷于技术与设计交叉领域的开发者。从写下第一行代码的那一刻起，我就被创造的乐趣深深吸引。过去几年里，我有幸参与了从初创公司到大型企业的各类项目，积累了丰富的全栈开发经验。
+            我是陈先楚，目前就读于南京农业大学植物病理学专业，攻读博士学位。我的研究方向主要聚焦于植物病原真菌的致病机制及分子检测技术，致力于通过现代分子生物学手段为农业生产中的病害防控提供科学依据。
           </p>
           <p>
-            工作之余，我喜欢通过写作来整理思路、分享经验。这个博客就是我记录学习历程、技术心得和生活感悟的地方。我相信知识分享的力量，也希望我的文章能帮助到正在学习路上的你。
+            在科研之余，我喜欢通过写作来整理思路、分享经验。这个博客是我记录学术历程、科研心得和生活感悟的地方。我相信知识分享的力量，也希望我的文章能帮助到正在植物病理学领域探索的同行和同学。
           </p>
           <p>
-            如果你对我的工作感兴趣，或者想聊聊技术、设计、咖啡，随时欢迎与我联系。
+            如果你对我的研究感兴趣，或者想聊聊植物病理学、科研方法、读博生活，随时欢迎与我联系。
           </p>
         </div>
       </section>
@@ -87,7 +87,7 @@ export default function About() {
       <section className="py-16 md:py-24 px-6">
         <div className="max-w-[680px] mx-auto">
           <h2 className="text-2xl font-semibold tracking-tight mb-8 text-center">
-            兴趣爱好
+            研究方向
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {interests.map((item) => (

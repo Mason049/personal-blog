@@ -5,25 +5,25 @@ const features = [
   {
     icon: User,
     title: "关于我",
-    description: "了解我的背景、经历和热爱的事物",
+    description: "了解我的学术背景、研究方向和热爱的事物",
     href: "/about",
   },
   {
     icon: Briefcase,
     title: "项目作品",
-    description: "探索我创建的项目和开源贡献",
+    description: "探索我参与的科研项目和学术成果",
     href: "/projects",
   },
   {
     icon: BookOpen,
     title: "博客文章",
-    description: "阅读我对技术、设计和生活的思考",
+    description: "阅读我对植物病理学、科研和生活的思考",
     href: "/blog",
   },
   {
     icon: Mail,
     title: "联系方式",
-    description: "有想法或合作意向？随时联系我",
+    description: "有学术交流或合作意向？随时联系我",
     href: "/contact",
   },
 ];
@@ -36,12 +36,12 @@ export default function Home() {
         <div className="max-w-[980px] mx-auto text-center">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-semibold tracking-tight leading-[1.1] mb-6">
             你好，我是
-            <span className="text-accent"> 你的名字</span>
+            <span className="text-accent"> 陈先楚</span>
           </h1>
           <p className="text-lg md:text-xl text-secondary max-w-2xl mx-auto leading-relaxed mb-10">
-            一名热爱创造的开发者 / 设计师 / 写作者。
+            南京农业大学植物病理学专业博士生
             <br className="hidden md:block" />
-            在这里记录我的思考、分享我的作品。
+            在这里记录我的科研历程、学术心得和生活感悟
           </p>
           <div className="flex items-center justify-center gap-4">
             <Link
@@ -102,17 +102,17 @@ export default function Home() {
           <div className="space-y-0">
             {[
               {
-                title: "如何构建高性能的 React 应用",
+                title: "植物病原真菌的分子检测技术研究进展",
                 date: "2026年4月15日",
-                category: "技术",
+                category: "科研",
               },
               {
-                title: "设计系统实践：从零到一",
+                title: "田间病害调查与样本采集的方法论",
                 date: "2026年4月8日",
-                category: "设计",
+                category: "实践",
               },
               {
-                title: "远程工作三年的感悟",
+                title: "读博三年的心路历程",
                 date: "2026年3月28日",
                 category: "生活",
               },

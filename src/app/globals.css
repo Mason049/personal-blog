@@ -6,8 +6,8 @@
   --secondary: #86868b;
   --tertiary: #f5f5f7;
   --border: #d2d2d7;
-  --accent: #0071e3;
-  --accent-hover: #0077ed;
+  --accent: #22c55e;
+  --accent-hover: #16a34a;
 }
 
 @theme inline {
@@ -28,8 +28,8 @@
     --secondary: #a1a1a6;
     --tertiary: #1d1d1f;
     --border: #424245;
-    --accent: #2997ff;
-    --accent-hover: #4dabff;
+    --accent: #30d158;
+    --accent-hover: #34d399;
   }
 }
 

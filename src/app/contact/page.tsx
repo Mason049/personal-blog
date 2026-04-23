@@ -29,7 +29,7 @@ export default function Contact() {
             联系方式
           </h1>
           <p className="text-lg text-secondary leading-relaxed">
-            有项目合作、技术交流或只是想说声你好？我随时欢迎。
+            有学术交流、项目合作或只是想说声你好？我随时欢迎。
           </p>
         </div>
       </section>
@@ -42,10 +42,10 @@ export default function Contact() {
               <div>
                 <p className="text-sm font-medium mb-0.5">邮箱</p>
                 <a
-                  href="mailto:hello@example.com"
+                  href="mailto:chenxianchu@njau.edu.cn"
                   className="text-sm text-secondary hover:text-accent transition-colors"
                 >
-                  hello@example.com
+                  chenxianchu@njau.edu.cn
                 </a>
               </div>
             </div>
@@ -53,7 +53,7 @@ export default function Contact() {
               <MapPin className="w-5 h-5 text-accent" />
               <div>
                 <p className="text-sm font-medium mb-0.5">位置</p>
-                <p className="text-sm text-secondary">中国，上海</p>
+                <p className="text-sm text-secondary">中国，南京</p>
               </div>
             </div>
             <div className="flex flex-col items-center gap-3 p-6 rounded-2xl bg-tertiary/50 text-center">
@@ -61,12 +61,12 @@ export default function Contact() {
               <div>
                 <p className="text-sm font-medium mb-0.5">GitHub</p>
                 <a
-                  href="https://github.com"
+                  href="https://github.com/Mason049"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-sm text-secondary hover:text-accent transition-colors"
                 >
-                  @username
+                  @Mason049
                 </a>
               </div>
             </div>
@@ -90,7 +90,7 @@ export default function Contact() {
                     setFormData({ ...formData, name: e.target.value })
                   }
                   className="w-full px-4 py-3 rounded-xl bg-tertiary border border-border/50 text-sm focus:outline-none focus:border-accent transition-colors"
-                  placeholder="你的名字"
+                  placeholder="您的姓名"
                 />
               </div>
               <div>
@@ -159,7 +159,7 @@ export default function Contact() {
             </p>
             <div className="flex items-center justify-center gap-6">
               <a
-                href="https://github.com"
+                href="https://github.com/Mason049"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 text-sm text-secondary hover:text-foreground transition-colors"
